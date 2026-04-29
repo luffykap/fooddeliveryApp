@@ -467,9 +467,13 @@ Database comes pre-populated with sample orders:
 
 ## 📚 Additional Documentation
 
+**For Cloud Deployment:**
+- **[RENDER_DEPLOYMENT.md](RENDER_DEPLOYMENT.md)** - Deploy to Render.com (free tier) ☁️
+
 **For Windows Users (After Cloning):**
 - **[WINDOWS_AFTER_CLONE.md](WINDOWS_AFTER_CLONE.md)** - Complete setup guide for Windows ⭐ **START HERE IF ON WINDOWS**
 - **[WINDOWS_ERROR_FIX.md](WINDOWS_ERROR_FIX.md)** - Fix for batch script errors 🔧
+- **[WINDOWS_MYSQL_FIX.md](WINDOWS_MYSQL_FIX.md)** - Fix for MySQL "Access Denied" errors 🗄️
 
 **For All Users:**
 - **[WINDOWS_SETUP.md](WINDOWS_SETUP.md)** - Windows installation & configuration guide

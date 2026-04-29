@@ -114,6 +114,13 @@ mysql -u root -p < WebApp\database\fooddb.sql
 REM (Will prompt for password)
 ```
 
+**Getting "Access denied" error?**
+
+See [WINDOWS_MYSQL_FIX.md](WINDOWS_MYSQL_FIX.md) for solutions. Common fixes:
+- Start MySQL service: `net start MySQL80`
+- Use alternative syntax: `type WebApp\database\fooddb.sql | mysql -u root`
+- Provide password: `mysql -u root -p < WebApp\database\fooddb.sql`
+
 **Verify it worked:**
 ```cmd
 mysql -u root -e "USE fooddb; SELECT COUNT(*) as orders FROM orders;"

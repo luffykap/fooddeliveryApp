@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: fooddelivery-app
+    env: java
+    runtime: java-21
+    buildCommand: |
+      cd WebApp && \
+      mvn clean package -DskipTests && \
+      mvn dependency:copy-dependencies -DoutputDirectory=target/dependency
+    startCommand: |
+      java -jar target/dependency/webapp-runner.jar \
+        --port $PORT \
+        target/fooddelivery.war
+    envVars:
+      - key: FOODDB_URL
+        value: jdbc:mysql://{{ secrets.MYSQL_HOST }}:3306/fooddb?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+      - key: FOODDB_USER
+        value: {{ secrets.MYSQL_USER }}
+      - key: FOODDB_PASSWORD
+        value: {{ secrets.MYSQL_PASSWORD }}
+      - key: PORT
+        value: 8080
+
